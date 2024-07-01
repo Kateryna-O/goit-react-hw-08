@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Contact.module.css";
 import { useDispatch, useSelector } from "react-redux";
-import { deleteContact } from "../../redux/contactsOps.js";
+import { deleteContact } from "../../redux/contacts/operations";
 
 const Contact = ({ contact }) => {
   const dispatch = useDispatch();
@@ -25,7 +25,7 @@ const Contact = ({ contact }) => {
       {contacts && (
         <div className={styles.contact}>
           <span>
-            {contact.name}: {contact.phone}
+            {contact.name}: {contact.number}
           </span>
           <button onClick={handleDelete} className={styles.deleteButton}>
             Delete

@@ -1,29 +1,33 @@
-.form {
+.formWrapper {
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  padding: 20px;
-  border: 1px solid #80cbc4;
-  border-radius: 8px;
-  max-width: 400px;
-  margin: 0 auto;
-  background-color: #e0f2f1;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  align-items: center;
+  justify-content: center;
   margin-top: 20px;
 }
 
-.field {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
+.form {
+  background-color: #ffffff;
+  padding: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+}
+
+.fieldWrapper {
+  margin: 20px 0;
 }
 
 .input {
-  padding: 8px;
-  border: 1px solid #80cbc4;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 16px;
   transition: border-color 0.3s;
+  box-sizing: border-box;
 }
 
 .input:focus {
@@ -32,12 +36,14 @@
   box-shadow: 0 0 4px rgba(0, 121, 107, 0.5);
 }
 
-.error {
+.errorMessage {
   color: #e57373;
   font-size: 14px;
+  margin-top: 4px;
 }
 
-.button {
+.submitButton {
+  width: 100%;
   padding: 10px;
   background-color: #4caf50;
   color: white;
@@ -48,6 +54,10 @@
   transition: background-color 0.3s, transform 0.3s;
 }
 
-.button:hover {
+.submitButton:hover {
   background-color: #45a049;
+}
+
+.submitButton:active {
+  transform: scale(0.98);
 }
